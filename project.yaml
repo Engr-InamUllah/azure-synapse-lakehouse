@@ -1,0 +1,19 @@
+name: azure-synapse-lakehouse
+owner: Engr-InamUllah
+status: scaffold
+stack: 'Azure Synapse, ADLS Gen2, PySpark, SQL, Power BI'
+pipeline:
+  - ingest
+  - validate
+  - transform
+  - model
+  - publish
+quality_gates:
+  - schema_validation
+  - null_thresholds
+  - duplicate_detection
+  - freshness_check
+  - automated_tests
+security:
+  secrets: environment_or_secret_store
+  least_privilege: true
